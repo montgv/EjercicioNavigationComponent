@@ -33,11 +33,11 @@ public class SegundoFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        NavController navController = Navigation.findNavController(view);
+        final NavController navController = Navigation.findNavController(view);
 
-        TextView txt1 = view.findViewById(R.id.txtTexto);
-        TextView txt2 = view.findViewById(R.id.txtNumero);
-        Button boton = view.findViewById(R.id.btPantallaFinal);
+        final TextView txt1 = view.findViewById(R.id.txtTexto);
+        final TextView txt2 = view.findViewById(R.id.txtNumero);
+        final Button boton = view.findViewById(R.id.btPantallaFinal);
 
         txt1.setText(getArguments().getString("texto"));
         txt2.setText(getArguments().getInt("numero"));

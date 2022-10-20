@@ -34,10 +34,10 @@ public class InicioFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        NavController navController = Navigation.findNavController(view);
-        EditText edit1 = view.findViewById(R.id.edTexto);
-        EditText edit2 = view.findViewById(R.id.edNumero);
-        Button boton = view.findViewById(R.id.btSegundaPantalla);
+        final NavController navController = Navigation.findNavController(view);
+        final EditText edit1 = view.findViewById(R.id.edTexto);
+        final EditText edit2 = view.findViewById(R.id.edNumero);
+        final Button boton = view.findViewById(R.id.btSegundaPantalla);
 
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,7 +56,7 @@ public class InicioFragment extends Fragment {
                     bundle.putString("texto", texto);
                     bundle.putInt("numero", numero);
 
-                    navController.navigate(R.id.action_inicioFragment_to_segundoFragment);
+                    navController.navigate(R.id.action_inicioFragment_to_segundoFragment, bundle);
                 }
             }
         });
