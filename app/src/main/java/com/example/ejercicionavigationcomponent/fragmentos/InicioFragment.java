@@ -56,7 +56,8 @@ public class InicioFragment extends Fragment {
                     bundle.putString("texto", texto);
                     bundle.putInt("numero", numero);
 
-                    navController.navigate(R.id.action_inicioFragment_to_segundoFragment, bundle);
+                    navController.navigate(R.id.action_inicioFragment_to_segundoFragment, bundle)
+                    ;
                 }
             }
         });

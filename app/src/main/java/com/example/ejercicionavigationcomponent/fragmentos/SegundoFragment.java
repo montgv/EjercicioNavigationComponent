@@ -40,7 +40,7 @@ public class SegundoFragment extends Fragment {
         final Button boton = view.findViewById(R.id.btPantallaFinal);
 
         txt1.setText(getArguments().getString("texto"));
-        txt2.setText(getArguments().getInt("numero"));
+        txt2.setText(String.valueOf(getArguments().getInt("numero")));
 
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
